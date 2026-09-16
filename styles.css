@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Optional header styling to match the top row layout */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: darkblue;
+    color: white;
+}
+.navigation a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.nav-links {
+    display: flex;
+}
+
+/* Main content container styling */
+.flex-container {
+    border: 1px solid green;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* The presenter's updated box design */
+.flex-item {
+    display: flex;
+    flex: 1 1 100px; 
+    border: 1px solid gray;
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+}
