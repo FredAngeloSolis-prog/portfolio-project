@@ -102,26 +102,3 @@ body {
     margin-bottom: 25px;
 }
 
-/* Reusable Skill Card Style */
-.skill-card {
-    display: inline-block; /* Places cards next to each other simply */
-    vertical-align: top;
-    width: 260px;
-    background-color: #ffffff;
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid #cccccc;
-    border-radius: 6px;
-    text-align: left;
-}
-
-.skill-card h3 {
-    color: #0066cc;
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-.skill-card p {
-    font-size: 14px;
-    color: #666666;
-}
