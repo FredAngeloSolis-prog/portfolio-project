@@ -1,104 +1,498 @@
-
+/* ==========================================
+   Base Global Resets & Typography
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333333;
-    line-height: 1.5;
-    text-align: center; /*  to center elements */
-}
-
-/* Activity 1: Layout  */
-#hero {
-    background-color: #ffffff;
-    padding: 50px 20px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #dddddd;
-}
-
-#hero img {
-    width: 200px;
-    height: 200px;
-    border-radius: 100px; /* circle trick */
-    border: 4px solid #333333;
-    margin-bottom: 15px;
-}
-
-#hero h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-#hero h2 {
-    font-size: 20px;
-    color: #0066cc;
-    margin-bottom: 15px;
-}
-
-#hero p {
-    max-width: 600px;
-    margin: 0 auto 25px auto;
-}
-
-/*Button  link */
-.button {
-    display: inline-block;
-    background-color: #0066cc;
-    color: #ffffff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-/* Activity 2: About Me Section  */
-#about {
-    background-color: #ffffff;
-    padding: 40px 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    border: 1px solid #cccccc;
-    border-radius: 8px;
-    text-align: left; /* left-aligned text for articles */
-}
-
-#about h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333333;
-}
-
-.bio-box {
-    margin-bottom: 20px;
-    padding: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fafafa;
-    border-left: 5px solid #0066cc; /*design for accent */
+    color: #333333;
+    line-height: 1.6;
 }
 
-.bio-box h3 {
+/* Global Section Layout Layouts */
+.section-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    color: #111111;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #0070f3;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* ==========================================
+   Activity 6: Sticky Navigation Menu Styles 
+   ========================================== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar .logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0070f3;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444444;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #0070f3;
+}
+
+/* ==========================================
+   Activity 1: Hero Section Layout 
+   ========================================== */
+/* ==========================================
+   Activity 1: Hero Section Layout (Centered)
+   ========================================== */
+.hero-section {
+    width: 100%;
+    min-height: 85vh;
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.hero-container {
+    max-width: 800px; /* Constrains text width for better readability when centered */
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column; /* Stacks image and content vertically */
+    align-items: center;    /* Centers everything horizontally */
+    text-align: center;     /* Centers all text properties */
+    gap: 40px;
+    width: 100%;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Ensures button aligns in the center */
+}
+
+h1 {
+    font-size: 3rem;
+    color: #111111;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.highlight {
+    color: #0070f3;
+}
+
+.tagline {
+    font-size: 1.4rem;
+    color: #555555;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #666666;
+    margin-bottom: 35px;
+    max-width: 600px; /* Prevents long text stretches across the page */
+}
+
+.btn-learn-more {
+    display: inline-block;
+    background-color: #0070f3;
+    color: #ffffff;
+    padding: 14px 35px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0, 112, 243, 0.3);
+    transition: all 0.2s ease;
+}
+
+.btn-learn-more:hover {
+    background-color: #0051b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 112, 243, 0.4);
+}
+
+.hero-image-box {
+    display: flex;
+    justify-content: center;
+    order: -1; /* Placed image ABOVE text when centered. Delete this line if you want it BELOW text. */
+}
+
+.profile-img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================
+   Activity 2: About Me Section 
+   ========================================== */
+.about-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.about-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.about-box {
+    flex: 1;
+    background-color: #fafafa;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #eaeaea;
+}
+
+.about-box h3 {
+    font-size: 1.4rem;
+    color: #111111;
+    margin-bottom: 15px;
+}
+
+.about-box p {
+    color: #555555;
     margin-bottom: 10px;
 }
 
-#about ul {
-    margin-left: 20px;
+/* ==========================================
+   Activity 3: Skills Section
+   ========================================== */
+.skills-section {
+    padding: 80px 0;
+    background-color: #fafafa;
+    border-bottom: 1px solid #eeeeee;
 }
 
-#about li {
-    margin-bottom: 5px;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
 }
 
-/* Activity 3: Skills Section  */
-#skills {
-    max-width: 900px;
-    margin: 20px auto 50px auto;
-    padding: 20px;
+.skill-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e1e8ed;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#skills h2 {
-    margin-bottom: 25px;
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    border-color: #0070f3;
 }
 
+.skill-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 1.25rem;
+    color: #111111;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    font-size: 0.95rem;
+    color: #666666;
+}
+
+/* ==========================================
+   Activity 4: Project Showcase Card Layouts 
+   ========================================== */
+.projects-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.projects-layout-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.project-showcase-card {
+    background-color: #fafafa;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-showcase-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-color: #0070f3;
+}
+
+.project-thumb-img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    background-color: #eaeaea;
+}
+
+.project-details-box {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.project-details-box h3 {
+    font-size: 1.3rem;
+    color: #111111;
+}
+
+.project-details-box p {
+    font-size: 0.95rem;
+    color: #666666;
+}
+
+.tech-tags {
+    font-size: 0.85rem;
+    color: #555555;
+}
+
+.view-project-btn {
+    display: inline-block;
+    color: #0070f3;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: auto;
+    font-size: 0.95rem;
+}
+
+.view-project-btn:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   Activity 5: Education & Experience Table 
+   ========================================== */
+.experience-section {
+    padding: 80px 0;
+    background-color: #fafafa;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.table-responsive-box {
+    overflow-x: auto;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 1rem;
+}
+
+.data-table th {
+    background-color: #111111;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.data-table tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #fcfcfc;
+}
+
+/* ==========================================
+   Activity 7: Contact Form Input Systems 
+   ========================================== */
+.contact-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.contact-submission-form {
+    max-width: 650px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-field-group label {
+    font-weight: 600;
+    color: #111111;
+    font-size: 0.95rem;
+}
+
+.input-field-group input,
+.input-field-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-field-group input:focus,
+.input-field-group textarea:focus {
+    outline: none;
+    border-color: #0070f3;
+    box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.15);
+}
+
+.submit-action-btn {
+    background-color: #0070f3;
+    color: #ffffff;
+    border: none;
+    padding: 14px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    align-self: flex-start;
+}
+
+.submit-action-btn:hover {
+    background-color: #0051b3;
+}
+
+/* ==========================================
+   Activity 9: Global Structural Footer 
+   ========================================== */
+.app-footer {
+    background-color: #111111;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #222222;
+}
+
+/* ==========================================
+   Activity 8: Extended Mobile Overrides 
+   ========================================== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .profile-img {
+        width: 240px;
+        height: 240px;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    .about-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .projects-layout-grid {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .data-table th,
+    .data-table td {
+        padding: 12px 14px;
+        font-size: 0.9rem;
+    }
+}
