@@ -4,82 +4,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fred Angelo R. Solis | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Activity 1: Introduce Yourself Section -->
-    <section>
-        <h1>Fred Angelo R. Solis</h1>
-        <h2>Aspiring Web Developer</h2>
-        <p>Welcome to my first portfolio website! I am learning how to build web pages using HTML, CSS, and JavaScript. This project will develop over time as I learn more technologies.</p>
-        <a href="#about">Learn More</a>
-        <br><br>
-       
-        <img src="images/profile.png.png" alt="Fred Angelo R. Solis Profile Picture" width="200">
-    </section>
-
-    <!-- Activity 2: Tell Your Story Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        
-        <div>
-            <h3>My Background</h3>
-            <p>I am a dedicated student currently studying web development. My personal background has given me a basic understanding of computer systems, which helps me when writing code.</p>
-        </div>
-
-        <div>
-            <h3>Hobbies & Interests</h3>
-            <ul>
-                <li>Exploring new technology and gadgets</li>
-                <li>Reading tech industry articles and tutorials</li>
-                <li>Building hands-on modern hardware projects</li>
+    <!-- Activity 6: Sticky Navigation Menu -->
+    <header class="navbar">
+        <div class="logo">FS</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
+        </nav>
+    </header>
 
-        <div>
-            <h3>My Goals</h3>
-            <ul>
-                <li>Learn frontend languages (HTML, CSS, JavaScript)</li>
-                <li>Master backend programming and databases</li>
-                <li>Graduate and secure a job as a Full-Stack Developer</li>
-            </ul>
+    <!-- Activity 1: Hero Section Layout -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">FRED ANGELO R. SOLIS</span></h1>
+                <p class="tagline">Aspiring Full-Stack Web Developer</p>
+                <p class="intro-text">Welcome to my portfolio! I am passionate about building clean, responsive, and user-friendly web applications. Currently learning the ins and outs of frontend and backend development.</p>
+                <a href="#about" class="btn-learn-more">Learn More</a>
+            </div>
+            <div class="hero-image-box">
+                <img src="images/profile.jpg" alt="Profile Photo of Fred Angelo R. Solis" class="profile-img">
+            </div>
         </div>
     </section>
 
-    <!-- Activity 3: Show Your Skills Section -->
-    <section id="skills">
-        <h2>My Skills</h2>
-        
-        <div>
-            <h3>HTML5</h3>
-            <p>Structuring basic text, headings, images, and links on a web page.</p>
-        </div>
-
-        <div>
-            <h3>CSS3</h3>
-            <p>Adding custom colors, margins, padding, text alignments, and basic borders.</p>
-        </div>
-
-        <div>
-            <h3>JavaScript</h3>
-            <p>Learning how to add interactive and dynamic components later in the course.</p>
-        </div>
-
-        <div>
-            <h3>Git Version Control</h3>
-            <p>Using basic terminal commands to track my project updates and commit files.</p>
-        </div>
-
-        <div>
-            <h3>Web Design</h3>
-            <p>Understanding how components layout sequentially on computer viewports.</p>
-        </div>
-
-        <div>
-            <h3>Problem Solving</h3>
-            <p>Troubleshooting code layouts and fixing errors in file directories.</p>
+    <!-- Activity 2: About Me Section -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-box">
+                    <h3>My Background</h3>
+                    <p>I am a dedicated student pursuing web development. My academic background has provided me with a foundational understanding of computer technologies, which I apply daily when writing clean, efficient code.</p>
+                </div>
+                <div class="about-box">
+                    <h3>Hobbies & Interests</h3>
+                    <p>When I'm not coding, I enjoy exploring new tech gadgets, reading up on industry trends, and building hands-on modern hardware projects.</p>
+                </div>
+                <div class="about-box">
+                    <h3>My Goals</h3>
+                    <p>My ultimate goal is to become an expert Full-Stack Developer, crafting seamless digital experiences and contributing to impactful open-source software platforms.</p>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- Activity 3: Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="section-container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>HTML5</h3>
+                    <p>Structuring semantic, clean, and accessible content for modern web pages.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>CSS3</h3>
+                    <p>Designing modern layouts using Flexbox, Grid, and fluid responsive styling.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3>JavaScript</h3>
+                    <p>Adding interactivity, handling DOM elements, and creating dynamic behaviors.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🌿</div>
+                    <h3>Git & GitHub</h3>
+                    <p>Managing codebase versioning, tracking file branches, and organizing project histories.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Responsive Design</h3>
+                    <p>Ensuring user interfaces adjust perfectly onto desktops, tablets, and phones.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🛠</div>
+                    <h3>Problem Solving</h3>
+                    <p>Analyzing programmatic errors and writing efficient algorithms for logical features.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activity 4: Show Your Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="section-container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-layout-grid">
+                <!-- Card 1 -->
+                <div class="project-showcase-card">
+                    <img src="images/project1.jpg" alt="E-Commerce Web Concept" class="project-thumb-img">
+                    <div class="project-details-box">
+                        <h3>E-Commerce Web Concept</h3>
+                        <p>A fluid product marketplace layout interface tracking shopping baskets dynamically.</p>
+                        <p class="tech-tags"><strong>Technologies:</strong> HTML5, CSS Flexbox</p>
+                        <a href="#" class="view-project-btn">View Project</a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="project-showcase-card">
+                    <img src="images/project2.jpg" alt="Analytics Dashboard" class="project-thumb-img">
+                    <div class="project-details-box">
+                        <h3>Analytics Dashboard Layout</h3>
+                        <p>An administrative panel interface optimized to show visual server health data points.</p>
+                        <p class="tech-tags"><strong>Technologies:</strong> CSS Grid, Semantic Layouts</p>
+                        <a href="#" class="view-project-btn">View Project</a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="project-showcase-card">
+                    <img src="images/project3.jpg" alt="SaaS Product Landing Page" class="project-thumb-img">
+                    <div class="project-details-box">
+                        <h3>SaaS Product Landing Page</h3>
+                        <p>A high-conversion landing layout system highlighting modern UI design elements.</p>
+                        <p class="tech-tags"><strong>Technologies:</strong> Responsive Media Queries</p>
+                        <a href="#" class="view-project-btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activity 5: Education & Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="section-container">
+            <h2 class="section-title">Education & Experience</h2>
+            <div class="table-responsive-box">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Timeline Period</th>
+                            <th>Institution / Space</th>
+                            <th>Role / Accomplishments</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024 - Present</td>
+                            <td>Tech Academy International</td>
+                            <td>Web Architecture Diploma Track</td>
+                        </tr>
+                        <tr>
+                            <td>2022 - 2024</td>
+                            <td>Innovative Solutions Lab</td>
+                            <td>Frontend UI Layout Intern</td>
+                        </tr>
+                        <tr>
+                            <td>2021 - 2022</td>
+                            <td>Open-Source Contributors</td>
+                            <td>Layout Sandbox Maintainer</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activity 7: Let People Contact You Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <h2 class="section-title">Contact Me</h2>
+            <form class="contact-submission-form" action="#" method="POST">
+                <div class="input-field-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                <div class="input-field-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="your.name@example.com">
+                </div>
+                <div class="input-field-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required placeholder="What is this regarding?">
+                </div>
+                <div class="input-field-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+                </div>
+                <button type="submit" class="submit-action-btn">Send Message</button>
+            </form>
+        </section>
+    </section>
+
+    <!-- Activity 9: Integrated Footer Elements -->
+    <footer class="app-footer">
+        <p>&copy; 2026 Fred Angelo R. Solis. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
